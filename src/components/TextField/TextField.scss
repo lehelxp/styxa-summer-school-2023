@@ -1,0 +1,19 @@
+$color-red: #c21515;
+$color-blue: #0000ff;
+$color-yellow: #ffff00;
+
+.text-field {
+  .text-input {
+    background-color: $color-blue;
+
+    &.red {
+      //.text-input.red
+      background-color: $color-red;
+    }
+
+    &.yellow {
+      //.text-input.yellow
+      background-color: $color-yellow;
+    }
+  }
+}

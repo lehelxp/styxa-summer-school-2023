@@ -1,0 +1,16 @@
+@import "../../variables.scss";
+
+.footer{
+display: flex;
+align-items:center;
+margin: 15px;
+align-self:center;
+.page-link{
+    color:inherit;
+    text-decoration: none;
+    padding: 8px;
+    &:hover{
+        color:$color-black;
+    }
+}
+}

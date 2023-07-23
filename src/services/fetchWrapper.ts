@@ -17,7 +17,7 @@ const getData = (api: string) => {
     return fetch(getUrl(api), requestOptions).then(handleResponse);
   };
   
-  const getUrl = (api: string) => {
+  const getUrl = (api:string) => {
     return `${process.env.REACT_APP_API_URL}${api}`;
   };
   

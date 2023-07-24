@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { City } from "../../pages/Cities";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { fetchWrapper } from "../../services/fetchWrapper";
 import Box from "@mui/material/Box/Box";
 import Table from '@mui/material/Table';
@@ -14,13 +14,13 @@ import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from "@mui/material";
 import Form from "../Form/Form";
-
+import MapIcon from '@mui/icons-material/Map';
 interface PointOfInterest{
   id:number;
 name:string;
 description:string;
 cityId:number
-mapsurl:string;
+mapsURL:string;
 }
 const CityDetails = () => {
   const [city, setCity] = useState<City>({} as City);
@@ -67,7 +67,8 @@ const handleSubmit=()=>{
       <h3>
         {city.description}
       </h3>
-      <h4>{city.population}</h4>
+      <h4>Population: {city.population}</h4>
+      <h5>Area: {city.area}</h5>
       <Box sx={{maxWidth:1900, m:"20px"}}>
       <Button variant="outlined" sx={{mb:3,mx:"auto",}} onClick={handleClickOpen}><AddIcon></AddIcon>Add point of interest</Button>
       <Form handleClose={handleClose} type="Point of interest" handleSubmit={handleSubmit} open={openpoi}></Form>
@@ -91,7 +92,7 @@ const handleSubmit=()=>{
                 {row.name}
               </TableCell>
               <TableCell align="right">{row.description}</TableCell>
-              <TableCell align="right">{row.mapsurl}</TableCell>
+              <TableCell align="right"><Link to={row.mapsURL}><MapIcon></MapIcon></Link></TableCell>
               <TableCell align="right"><Button onClick={handleClickOpen}><EditIcon></EditIcon></Button></TableCell>
             </TableRow>
           ))}

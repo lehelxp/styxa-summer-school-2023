@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Car</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="owner">Owner</label>
+            <input type="text" id="owner" name="owner"/>
+        </div>
+        <div>
+            <label for="plate">Licence Plate</label>
+            <input type="text" id="plate" name="plate"/>
+        </div>
+        <div>
+            <label for="fabrication_date">Fabrication date</label>
+            <input type="date" id="fabrication_date" name="fabrication_date"/>
+        </div>
+        <div>
+            <p>Please select the color of the car:</p>
+            <input type="radio" id="red" name=color value="red"/>
+            <label for="red">Red</label><br />
+            <input type="radio" id="black" name=color value="black"/>
+            <label for="black">Black</label><br />
+            <input type="radio" id="white" name=color value="white"/>
+            <label for="white">White</label><br />
+            <input type="radio" id="blue" name=color value="blue"/>
+            <label for="blue">Blue</label><br />
+        </div>
+        <div>
+            <p>Extra features:</p>
+            <input type="checkbox" id="automatic" name="automatic" value="Automatic"/>
+            <label for="automatic">Automatic transmision</label><br />
+            <input type="checkbox" id="heatedseat" name="heatedseat" value="heatedseat"/>
+            <label for="heatedseat">Heated Seats</label><br />
+            <input type="checkbox" id="parkingsensor" name="parkingsensor" value="parkingsensor"/>
+            <label for="parkingsensor">Parking Sensor</label><br />
+        </div>
+        <button class="save">Submit</button>
+    </form>
+</body>
+</html>
